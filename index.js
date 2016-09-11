@@ -24,7 +24,7 @@ const _cleanInvalidProps = (props, validProps) => {
 
 const ProgressIndicator = (props) => {
   if (Platform.OS !== 'ios') { /* isAndroid */
-    const passProps = _cleanInvalidProps(Object.assign({}, props), ProgressBarAndroid.propTypes);
+    const passProps = _cleanInvalidProps(Object.assign({}, props), ActivityIndicator.propTypes);
     if("size" in props) {
       if(props.size === "large" || props.size === "small") {
         passProps.styleAttr = (props.size === "large") ? "Large" : "Small";
