@@ -7,7 +7,7 @@
 import React from 'react';
 import {
   ActivityIndicatorIOS,
-  ProgressBarAndroid,
+  ActivityIndicator,
   ProgressViewIOS,
   View,
   Platform
@@ -31,7 +31,7 @@ const ProgressIndicator = (props) => {
       }
     }
 
-    return <ProgressBarAndroid {...passProps} />;
+    return <ActivityIndicator {...passProps} />;
   } else {
     if ("progress" in props) {
       const passProps = _cleanInvalidProps(Object.assign({}, props), ProgressViewIOS.propTypes);
